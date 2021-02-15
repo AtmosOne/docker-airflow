@@ -19,6 +19,10 @@ services:
         environment:
             - LOAD_EX=n
             - EXECUTOR=Local
+            - AIRFLOW__CONN__BLA_BLA_BLA=my-conn-type://login:password@host:port/schema?param1=val1&param2=val2
+            - AIRFLOW_CONN_BLA_BLA_BLA=my-conn-type://login:password@host:port/schema?param1=val1&param2=val2
+        env_file: 
+            - .env
         logging:
             options:
                 max-size: 10m
